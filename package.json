@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/SaralynOgden/TestingCrons/issues"
   },
+  "dependencies": {
+    "cron": "3.10.7"
+  }
   "homepage": "https://github.com/SaralynOgden/TestingCrons#readme"
 }
