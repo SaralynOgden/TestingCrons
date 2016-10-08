@@ -1,9 +1,8 @@
 const CronJob = require('cron').CronJob;
-const bot = require('/.bot.js');
+const bot = require('./bot.js');
 
-new CronJob({
-  cronTime: '*/5 * * * *',
-  onTick: bot.start();
-  start: true,
-  timeZone: 'America/Los_Angeles'
-});
+new CronJob('02 * * * * *',
+  bot.start,
+  null,
+  true,
+  'America/Los_Angeles');
