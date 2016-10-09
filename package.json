@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "knex": "knex",
+    "nodemon": "nodemon server.js",
+    "heroku-postbuild": "knex: migrate:latest",
+    "nf": "nf start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +22,21 @@
   },
   "homepage": "https://github.com/SaralynOgden/TestingCrons#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
     "cron": "^1.1.1",
+    "dotenv": "^2.0.0",
+    "express": "^4.14.0",
+    "humps": "^1.1.0",
+    "knex": "^0.12.2",
+    "morgan": "^1.7.0",
+    "pg": "^6.1.0",
     "request": "^2.75.0"
+  },
+  "engines": {
+    "node": "6.5.0"
+  },
+  "devDependencies": {
+    "foreman": "^2.0.0"
   }
 }
